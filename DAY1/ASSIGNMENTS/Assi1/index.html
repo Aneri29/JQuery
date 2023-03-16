@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Assiganment1</title>
+  </head>
+
+  <body>
+    <div class="container mx-auto border-2 m-5 ">
+      <h1 class="bg-black font-bold text-2xl text-white text-center shadow-lg p-3 mb-3">Droplist For Select Country</h1>
+     
+      <select name="Country" id="Country" class="text-3xl border-4" onchange="selectCountry(value)">
+        <option value=" ">Please select</option>
+        <option value="India">India</option>
+        <option value="United Kingdom">United Kingdom</option>
+        <option value="South Korea">South Korea</option>
+        <option value="Japan">Japan</option>
+        <option value="United State of America">United State of America</option>
+        <option value="Turkey">Turkey</option>
+      </select>
+
+      <div id="CountryList" class="text-3xl mt-5 " style="display: block">
+        <ul>
+          <li>India</li>
+          <li>United Kingdom</li>
+          <li>South Korea</li>
+          <li>Japan</li>
+          <li>United State of America</li>
+          <li>Turkey</li>
+        </ul>
+      </div>
+
+      <div id="result" class="bg-black font-bold text-2xl text-white text-center shadow-lg p-3 my-3"></div>
+
+      <script>
+        function selectCountry(value){
+          if(value != " " ){
+            $('#result').html("Your Selected Country : " + value);
+            $('#CountryList').css('display','none');
+          }else{
+            $('#result').html(" ");
+            $('#CountryList').css('display','block');
+          }
+        }
+      </script>
+    </div>
+  </body>
+</html>

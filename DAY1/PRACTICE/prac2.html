@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Practice2</title>
+    <script>
+
+    </script>
+
+</head>
+
+<body>
+    <div class="container mx-auto border-2 m-5 ">
+        <h1 class="bg-black font-bold text-2xl text-white text-center shadow-lg p-3 mb-3">Practice2</h1>
+
+        <div class="flex justify-evenly text-lg">
+            <label class="font-bold text-2xl" for="">Please select your technology :</label>
+            <div class=" ">
+                <input class=" " type="radio" name="rdo" id="r1" value="PHP" onclick="abc(id);">
+                <label class="mr-2 text-xl" for="r1">
+
+                    PHP
+                </label>
+
+                <input class=" " type="radio" name="rdo" id="r2" value="ASP.NET" onclick="abc(id);">
+                <label class="mr-2 text-xl" for="r2">
+
+                    ASP.NET
+                </label>
+
+                <input class=" " type="radio" name="rdo" id="r3" value="ASP" onclick="abc(id);">
+                <label class="mr-2 text-xl" for="r3">
+
+                    ASP
+                </label>
+
+                <input class=" " type="radio" name="rdo" id="r4" value="JSP" onclick="abc(id);">
+                <label class="mr-2 text-xl" for="r4">
+
+                    JSP
+                </label>
+
+                <input class=" " type="radio" name="rdo" id="r5" value="PERL" onclick="abc(id);">
+                <label class="mr-2 text-xl" for="r5">
+
+                    PERL</label>
+
+                <input class=" " type="radio" name="rdo" id="r6" value="Clod Fusion" onclick="abc(id);">
+                <label class="mr-2 text-xl" for="r6">
+
+                    Clod Fusion</label>
+
+                <input class=" " type="radio" name="rdo" id="r7" value="Other" onclick="abc(id);">
+                <label class="mr-2 text-xl" for="r7">
+
+                    Other</label>
+            </div>
+        </div>
+        <br>
+        <div class="text-center text-5xl p-5">
+            <span style="display: none" id="sp-r1">You Have Selected : PHP</span>
+            <span style="display: none" id="sp-r2">You Have Selected : ASP.NET</span>
+            <span style="display: none" id="sp-r3">You Have Selected : ASP</span>
+            <span style="display: none" id="sp-r4">You Have Selected : JSP</span>
+            <span style="display: none" id="sp-r5">You Have Selected : PERL</span>
+            <span style="display: none" id="sp-r6">You Have Selected : Clod Fusion</span>
+            <span style="display: none" id="sp-r7">You Have Selected : Other</span>
+        </div>
+
+        <!-- <div class=" font-bold text-2xl  text-center p-3 mt-3">
+            <span> You Have Selected :</span>
+        </div> -->
+        <script>
+            function abc(a){
+                $(`#${a}`).change(function () {
+                    $(`span`).css('display', 'none');
+                    $(`#sp-${a}`).css('display', 'block');
+                })
+            }
+
+        </script>
+
+    </div>
+</body>
+
+</html>
